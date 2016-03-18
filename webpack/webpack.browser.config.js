@@ -13,7 +13,7 @@ module.exports =  {
      ]
   },
   output: {
-    filename: "./js/[name].js",
+    filename: "./js/[name]-[chunkhash].js",
     path: "build",
   },
   module: {
@@ -24,6 +24,14 @@ module.exports =  {
       }
     ],
     loaders : [
+        {
+          test: /vendors\/.+\.(jsx|js)$/,
+          loader: 'imports?jQuery=jquery,$=jquery,this=>window'
+        },
+        {
+          test: /client\/.+\.(jsx|js)$/,
+          loader: 'imports?jQuery=jquery,$=jquery,this=>window'
+        },
         {
           test: /(\.js$|\.jsx$)/,
           exclude: /node_modules/,
@@ -55,7 +63,7 @@ module.exports =  {
     configFile: '.eslintrc'
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendors', './js/vendors.js', Infinity),
+    new webpack.optimize.CommonsChunkPlugin('vendors', './js/vendors-[chunkhash].js', Infinity),
     function() {
       this.plugin("done", function(stats) {
         require("fs").writeFileSync(
