@@ -1,7 +1,7 @@
 {
-  "name": "jsguild",
+  "name": "todoapp",
   "version": "1.0.0",
-  "description": "Application to host all JS Guild stuff @ practo",
+  "description": "Todo application based on react and redux",
   "main": "index.js",
   "scripts": {
     "eslint": "./node_modules/.bin/eslint --config=.eslintrc ./src/**/.jsx",
