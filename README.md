@@ -60,7 +60,7 @@ cp config/config.js.sample config/config.js
 
 ```server {
   set $server_uri 127.0.0.1:8142;
-  server_name jsguild.practo.local;
+  server_name todo.local;
   listen 80;
 
   access_log /var/log/nginx/app.access.log;

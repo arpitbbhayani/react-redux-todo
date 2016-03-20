@@ -15,10 +15,9 @@
     "serve-prod": "npm run build-prod && pm2 stop all && pm2 start ./dist/main.js"
   },
   "keywords": [
-    "guild",
-    "javascript",
-    "js",
-    "libraries"
+    "todo",
+    "react",
+    "redux"
   ],
   "author": "Arpit Bhayani",
   "license": "ISC",
@@ -31,7 +30,10 @@
     "raw-loader": "^0.5.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
+    "react-redux": "^4.4.1",
     "react-router": "^2.0.1",
+    "react-router-redux": "^4.0.0",
+    "redux": "^3.3.1",
     "superagent": "^1.8.1"
   },
   "devDependencies": {
