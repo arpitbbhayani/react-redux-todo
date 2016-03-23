@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router';
 
-import TodoSnippetComponent from './components/todo-snippet/todo-snippet.jsx';
+import Todos from './components/todo-all/todo-all.jsx';
 
 export default(
-  <Route path="/" component={ TodoSnippetComponent } />
+  <Route path="/" component={ Todos } />
 );
